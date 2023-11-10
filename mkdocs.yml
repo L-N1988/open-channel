@@ -1,0 +1,262 @@
+site_name: 计算数学/科学计算 WiKi
+site_author: Reichtum
+site_url: https://github.com/ReichtumQian
+
+# theme:
+#     name: 'material'
+#     palette:
+
+#     # Light mode
+#     - media: "(prefers-color-scheme: light)"
+#       scheme: default
+#       primary: pink
+#       accent: indigo
+#       toggle:
+#         icon: material/toggle-switch-off-outline
+#         name: Switch to dark mode
+
+#     # Dark mode
+#     - media: "(prefers-color-scheme: dark)"
+#       scheme: slate
+#       primary: pink
+#       accent: blue
+#       toggle:
+#         icon: material/toggle-switch
+#         name: Switch to light mode
+
+theme:
+  name: material
+  custom_dir: theme
+  font: false
+  # custom_dir: overrides
+  logo: img/logo.bmp
+  features:
+    - navigation.instant
+    - navigation.top
+    - content.code.annotate
+    - navigation.tabs
+
+  palette:
+    # Light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: blue grey
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - footnotes
+  # - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  # - pymdownx.superfences
+  # - pymdownx.details
+  # - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - roamlinks 
+  - mermaid2
+  - section-index
+  # - mkpdfs
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+repo_name: Reichtum/ScientificComputingWiKi
+repo_url: https://github.com/ReichtumQian/ScientificComputingWiKi
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 简介:
+    - "index.md"
+    - 如何贡献: "简介/如何贡献.md"
+    - 数学符号表: "简介/数学符号表.md"
+    - 资料推荐: "简介/资料推荐.md"
+  - 数学基础:
+    - "数学基础/数学基础简介.md"
+    - 初等数学基础:
+      - "数学基础/初等数学基础/初等数学基础简介.md"
+    - 常用不等式:
+      - "数学基础/常用不等式/常用不等式简介.md"
+      - 基本不等式: "数学基础/常用不等式/基本不等式.md"
+      - 三角不等式: "数学基础/常用不等式/三角不等式.md"
+      - 伯努利不等式: "数学基础/常用不等式/伯努利不等式.md"
+      - 琴生不等式: "数学基础/常用不等式/琴生不等式.md"
+      - 柯西-施瓦茨不等式: "数学基础/常用不等式/柯西-施瓦茨不等式.md"
+      - 杨氏不等式: "数学基础/常用不等式/杨氏不等式.md"
+      - Holder不等式: "数学基础/常用不等式/Holder不等式.md"
+      - 闵可夫斯基不等式: "数学基础/常用不等式/闵可夫斯基不等式.md"
+    - 几何学基础:
+      - "数学基础/几何学基础/几何学基础简介.md"
+    - 高等代数基础:
+      - "数学基础/高等代数基础/高等代数基础简介.md"
+    - 数学分析基础:
+      - "数学基础/数学分析基础/数学分析基础简介.md"
+      - 一元微分学:
+        - "数学基础/数学分析基础/一元微分学/一元微分学简介.md"
+      - 一元积分学:
+        - "数学基础/数学分析基础/一元积分学/一元积分学简介.md"
+        - 定积分概念: "数学基础/数学分析基础/一元积分学/定积分概念.md"
+      - 多元微分学:
+        - "数学基础/数学分析基础/多元微分学/多元微分学简介.md"
+      - 多元积分学:
+        - "数学基础/数学分析基础/多元积分学/多元积分学简介.md"
+        - 二重积分: "数学基础/数学分析基础/多元积分学/二重积分.md"
+        - 三重积分: "数学基础/数学分析基础/多元积分学/三重积分.md"
+      - 向量函数微分学:
+        - "数学基础/数学分析基础/向量函数微分学/向量函数微分学简介.md"
+    - 实变函数基础:
+      - "数学基础/实变函数基础/实变函数基础简介.md"
+    - 泛函分析基础:
+      - "数学基础/泛函分析基础/泛函分析基础简介.md"
+      - 度量空间:
+        - "数学基础/泛函分析基础/度量空间/度量空间简介.md"
+      - 赋范线性空间与Banach空间:
+        - "数学基础/泛函分析基础/赋范线性空间与Banach空间/赋范线性空间与Banach空间简介.md"
+      - 内积空间与Hilbert空间:
+        - "数学基础/泛函分析基础/内积空间与Hilbert空间/内积空间与Hilbert空间简介.md"
+      - Sobolev空间:
+        - "数学基础/泛函分析基础/Sobolev空间/Sobolev空间简介.md"
+        - 广义导数: "数学基础/泛函分析基础/Sobolev空间/广义导数.md"
+        - Sobolev空间概念: "数学基础/泛函分析基础/Sobolev空间/Sobolev空间概念.md"
+        - Sobolev等价范数: "数学基础/泛函分析基础/Sobolev空间/Sobolev等价范数.md"
+    - 常微分方程:
+      - "数学基础/常微分方程/常微分方程简介.md"
+    - 偏微分方程:
+      - "数学基础/偏微分方程/偏微分方程简介.md"
+  - 科学计算工具: 
+    - "科学计算工具/科学计算工具简介.md"
+    - Matlab: 
+      - "科学计算工具/Matlab/Matlab简介.md"
+    - Maple:
+      - "科学计算工具/Maple/Maple简介.md"
+    - Mathematica:
+      - "科学计算工具/Mathematica/Mathematica简介.md"
+    - Lapack:
+      - "科学计算工具/Lapack/Lapack简介.md"
+    - Eigen:
+      - "科学计算工具/Eigen/Eigen简介.md"
+  - 误差分析:
+    - "误差分析/误差分析简介.md"
+  - 数值线性代数:
+    - "数值线性代数/数值线性代数简介.md"
+    - 线性方程组直接法:
+      - "数值线性代数/线性方程组直接法/线性方程组直接法简介.md"
+    - 线性方程组迭代法:
+      - "数值线性代数/线性方程组迭代法/线性方程组迭代法简介.md"
+      - Jacobi迭代法: "数值线性代数/线性方程组迭代法/Jacobi迭代法.md"
+    - 最小二乘法:
+      - "数值线性代数/最小二乘法/最小二乘法简介.md"
+    - 特征值计算: 
+      - "数值线性代数/特征值计算/特征值计算简介.md"
+      - 幂法: "数值线性代数/特征值计算/幂法.md"
+    - 加速矩阵乘法: "数值线性代数/加速矩阵乘法/加速矩阵乘法简介.md"
+    - 大型稀疏矩阵: "数值线性代数/大型稀疏矩阵/大型稀疏矩阵简介.md"
+  - 非线性问题: 
+    - "非线性问题/非线性问题简介.md"
+    - 非线性方程求解:
+      - "非线性问题/非线性方程求解/非线性方程求解简介.md"
+      - 二分法: "非线性问题/非线性方程求解/二分法.md"
+      - 牛顿法: "非线性问题/非线性方程求解/牛顿法.md"
+      - 割线法: "非线性问题/非线性方程求解/割线法.md"
+    - 非线性方程组求解:
+      - 高维牛顿法: "非线性问题/非线性方程组求解/高维牛顿法.md"
+    - 确定多项式零点:
+      - 格雷费方法: "非线性问题/确定多项式零点/格雷费方法.md"
+  - 多项式插值: 
+    - "多项式插值/多项式插值简介.md"
+    - 单变量多项式插值:
+      - "多项式插值/单变量多项式插值/单变量多项式插值简介.md"
+    - 样条插值:
+      - "多项式插值/样条插值/样条插值简介.md"
+    - 多元多项式插值:
+      - "多项式插值/多元多项式插值/多元多项式插值简介.md"
+  - 数值逼近: 
+    - "数值逼近/函数逼近论简介.md"
+    - 正交多项式（二次平均）逼近: 
+      - "数值逼近/正交多项式逼近/正交多项式逼近简介.md"
+      - 正交多项式概念: "数值逼近/正交多项式逼近/正交多项式概念.md"
+      - 正交多项式基本性质: "数值逼近/正交多项式逼近/正交多项式基本性质.md"
+      - 正交多项式逼近: "数值逼近/正交多项式逼近/正交多项式逼近.md"
+      - 常用正交多项式: "数值逼近/正交多项式逼近/常用正交多项式.md"
+      - 离散二次平均逼近: "数值逼近/正交多项式逼近/离散二次平均逼近.md"
+    - 最佳一致逼近: 
+      - "数值逼近/最佳一致逼近/最佳一致逼近简介.md"
+      - 切比雪夫多项式: "数值逼近/最佳一致逼近/切比雪夫多项式.md"
+      - 最佳一致逼近: "数值逼近/最佳一致逼近/最佳一致逼近.md"
+    - 维尔斯特拉斯定理: "数值逼近/维尔斯特拉斯定理.md"
+    - 广义多项式混沌法:
+      - "数值逼近/广义多项式混沌法/广义多项式混沌法简介.md"
+      - GPC多项式概念: "数值逼近/广义多项式混沌法/GPC多项式概念.md"
+      - GPC多项式逼近论: "数值逼近/广义多项式混沌法/GPC多项式逼近论.md"
+  - 数值微积分: 
+    - "数值微积分/数值微积分简介.md"
+    - 数值微分: "数值微积分/数值微分/数值微分简介.md"
+    - 一维数值积分:
+      - 一维数值积分理论: "数值微积分/一维数值积分/一维数值积分理论.md"
+      - 牛顿-柯特斯公式: "数值微积分/一维数值积分/牛顿-柯特斯公式.md"
+      - 复化公式: "数值微积分/一维数值积分/复化公式.md"
+      - 高斯公式: "数值微积分/一维数值积分/高斯公式.md"
+    - 高维数值积分:
+      - 高维牛顿-柯特斯公式: "数值微积分/高维数值积分/高维牛顿-柯特斯公式.md"
+      - 蒙特卡洛积分: "数值微积分/高维数值积分/蒙特卡洛积分.md"
+  - 微分方程数值解:
+    - "微分方程数值解/微分方程数值解简介.md"
+    - 常微分方程初值问题:
+      - "微分方程数值解/常微分方程初值问题/常微分方程初值问题简介.md"
+      - 欧拉法:
+        - "微分方程数值解/常微分方程初值问题/欧拉法/欧拉法简介.md"
+      - 线性多步法:
+        - "微分方程数值解/常微分方程初值问题/线性多步法/线性多步法简介.md"
+      - 龙格库塔方法:
+        - 龙格库塔方法概念: "微分方程数值解/常微分方程初值问题/龙格库塔方法/龙格库塔方法概念.md"
+    - 椭圆方程边值问题:
+      - "微分方程数值解/椭圆方程边值问题/椭圆方程边值问题简介.md"
+      - 多重网格:
+        - "微分方程数值解/椭圆方程边值问题/多重网格/多重网格简介.md"
+    - 抛物方程差分方法:
+      - "微分方程数值解/抛物方程差分方法/抛物方程差分方法简介.md"
+    - 双曲方程差分方法:
+      - "微分方程数值解/双曲方程差分方法/双曲方程差分方法简介.md"
+      - 平流方程:
+        - "微分方程数值解/双曲方程差分方法/平流方程/平流方程简介.md"
+      - 波动方程:
+        - "微分方程数值解/双曲方程差分方法/波动方程/波动方程简介.md"
+    - 有限体积方法:
+      - "微分方程数值解/有限体积方法/有限体积方法简介.md"
+  - 有限元方法: 
+    - "有限元方法/有限元方法简介.md"
+    - 抽象变分问题: "有限元方法/抽象变分问题/抽象变分问题简介.md"
+    - 有限元离散化: "有限元方法/有限元离散化/有限元离散化简介.md"
+  - 其他专题: 
+    - "其他专题/其他专题简介.md"
+    - 高性能计算: "其他专题/高性能计算/高性能计算简介.md"
