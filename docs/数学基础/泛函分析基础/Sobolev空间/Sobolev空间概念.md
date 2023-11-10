@@ -17,7 +17,7 @@
 由于记号比较复杂，这里举个例子，例如
 
 $$
- H_0^2(\Omega) = \{v: v \in H^2(\Omega), v|_{\Gamma} = \frac{\partial v}{\partial \mathbf{n}} \bigg|_{\Gamma} = 0\}
+H_0^2(\Omega) = \{v: v \in H^2(\Omega), v|_{\Gamma} = \frac{\partial v}{\partial \mathbf{n}} \bigg|_{\Gamma} = 0\}
 $$
 
 ## Sobolev 空间范数与半范数
