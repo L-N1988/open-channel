@@ -7,4 +7,4 @@
 
 无论大家是在学《科学计算》、《数值分析》、《数值代数》、《微分方程数值解》、《有限元方法》都可以来参考或为仓库做出贡献。
 
-在线阅读网址：https://reichtumqian.github.io/ScientificComputingWiKi/
+在线阅读网址：https://l-n1988.github.io/open-channel/
