@@ -5,10 +5,6 @@ window.MathJax = {
       processEscapes: true,
       processEnvironments: true
     },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    },
     startup: {
     ready() {
       MathJax.startup.defaultReady();
@@ -26,4 +22,3 @@ window.MathJax = {
   document$.subscribe(() => {
     MathJax.typesetPromise()
   })
-  
