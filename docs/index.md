@@ -3,7 +3,6 @@
 
 - Fourier analysis $FFT$
 
-$$\int_{a}^{b}f(x)dx=F(b)-F(a)$$
-
+$$\displaystyle\int_{a}^{b}f(x)dx=F(b)-F(a)$$
 
 $$ E = mc^2 $$
