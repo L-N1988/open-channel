@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Matrix" name="author"/>
+<link href="https://github.com/L-N1988/open-channel/%E6%95%B0%E5%80%BC%E9%80%BC%E8%BF%91/%E6%AD%A3%E4%BA%A4%E5%A4%9A%E9%A1%B9%E5%BC%8F%E9%80%BC%E8%BF%91/%E6%AD%A3%E4%BA%A4%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%A6%82%E5%BF%B5/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.8" name="generator"/>
+<title>正交多项式概念 - 了那 WiKi</title>
+<link href="../../../assets/stylesheets/main.4b4a2bd9.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="light-blue" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<!-- For updates subscribe to the
+  <a href="https://lyz-code.github.io/blue-book/newsletter/0_newsletter_index/"><strong>RSS feed</strong></a>
+  <img src="/blue-book/img/orange_logo.png" height="15" width="15"> -->
+</div>
+</aside>
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="了那 WiKi" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="了那 WiKi">
+<img alt="logo" src="../../../img/logo.bmp"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            了那 WiKi
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              正交多项式概念
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="light-blue" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="light-blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/L-N1988/open-channel" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    L-N1988/open-channel
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+          
+  
+  简介
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0/%E7%BA%A7%E6%95%B0%E6%94%B6%E6%95%9B%E6%80%A7/">
+          
+  
+  傅里叶分析
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="了那 WiKi" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="了那 WiKi">
+<img alt="logo" src="../../../img/logo.bmp"/>
+</a>
+    了那 WiKi
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/L-N1988/open-channel" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    L-N1988/open-channel
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+<span class="md-ellipsis">
+    简介
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Index
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    傅里叶分析
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            傅里叶分析
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    傅里叶级数
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            傅里叶级数
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0/%E7%BA%A7%E6%95%B0%E6%94%B6%E6%95%9B%E6%80%A7/">
+<span class="md-ellipsis">
+    级数收敛性
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90/%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0/%E5%8F%8D%E4%BE%8B/">
+<span class="md-ellipsis">
+    反例-Fejér级数
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    平方可积空间
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    正交多项式的概念
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>正交多项式概念</h1>
+<p>在内积空间中我们已经讨论过「正交」、「正交基」的概念，在 Hilbert 空间中我们讨论了「最佳逼近」的概念。这里稍微回顾一下，所谓最佳逼近问题，就是假设 <span class="arithmatex">\(\mathcal{H}\)</span> 为原 Hilbert 空间，<span class="arithmatex">\(M\)</span> 是 <span class="arithmatex">\(\mathcal{H}\)</span> 的子空间，给定 <span class="arithmatex">\(f \in \mathcal{H}\)</span> ，希望在 <span class="arithmatex">\(M\)</span> 中找到一个与 <span class="arithmatex">\(f\)</span> 「距离最近」的元素。</p>
+<p>在正交多项式逼近论中，上述 Hilbert 空间 <span class="arithmatex">\(\mathcal{H}\)</span> 就是下面定义的 <span class="arithmatex">\(L_w^2([a,b])\)</span> 空间，是一个相对「要求宽松」的空间， 只要通过选取权函数 <span class="arithmatex">\(w(x)\)</span>，绝大多数我们想逼近的目标都能被包含其中。而 <span class="arithmatex">\(M\)</span> 就是 <span class="arithmatex">\([a,b]\)</span> 上的 <span class="arithmatex">\(N\)</span> 阶多项式空间 <span class="arithmatex">\(\mathbb{P}_N\)</span>，我们希望在 <span class="arithmatex">\(\mathbb{P}_N\)</span> 中找到一个多项式 <span class="arithmatex">\(P\)</span> 与 <span class="arithmatex">\(L_w^2([a,b])\)</span> 中给定的目标函数 <span class="arithmatex">\(f\)</span> 「距离最近」。</p>
+<p>而正交多项式便是 <span class="arithmatex">\(\mathbb{P}_N\)</span> 中的一组正交基，正交多项式的引入为 <span class="arithmatex">\(P\)</span> 具体表达式的计算提供了便利，因为根据线性空间的性质， <span class="arithmatex">\(P\)</span> 可被 <span class="arithmatex">\(P_0,\cdots,P_N\)</span> 线性表出，且 <span class="arithmatex">\(P_i\)</span> 对应的系数即 <span class="arithmatex">\(\langle P, P_i \rangle / ||P_i||^2\)</span>。</p>
+<p>沿着上面的思路，我们首先要定义 <span class="arithmatex">\([a,b]\)</span> 上的平方可积空间 <span class="arithmatex">\(L_w^2([a,b])\)</span>，再定义正交多项式的概念。</p>
+<h2 id="_1">平方可积空间<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>这里我们先引入权函数的概念，初学者可能不理解为什么在积分中要再加个权函数 <span class="arithmatex">\(w(x)\)</span> ，这其实是提供了一种弹性，因为如果完全固定 <span class="arithmatex">\(w(x)\)</span>，此时我们希望逼近的函数 <span class="arithmatex">\(f\)</span> 可能并不在 <span class="arithmatex">\(L_w^2([a,b])\)</span> 中，这样正交多项式逼近理论就失效了(因为 <span class="arithmatex">\(f\)</span> 甚至不在原空间中，更何谈逼近一说？)。因此简洁来说设置 <span class="arithmatex">\(w(x)\)</span> 的目的是通过合适的选取，让我们想要逼近的目标函数 <span class="arithmatex">\(f\)</span> 能够位于 <span class="arithmatex">\(L_w^2([a,b])\)</span> 中，从而应用正交多项式理论。</p>
+<blockquote>
+<p><strong>定义</strong>(权函数)</p>
+<p><span class="arithmatex">\(w(x)\)</span> 是定义在区间 <span class="arithmatex">\([a,b]\)</span> (<span class="arithmatex">\(a,b\)</span> 可以取 <span class="arithmatex">\(\pm \infty\)</span>)，满足 <span class="arithmatex">\(w(x) \geq 0\)</span>，<span class="arithmatex">\(\int_a^b w(x)\mathrm{d} x &gt; 0\)</span>，且对 <span class="arithmatex">\(\forall k \in \mathbb{N}, \int_a^b x^kw(x)\mathrm{d} x\)</span> 存在，则其可以为权函数。</p>
+</blockquote>
+<p>有了权函数 <span class="arithmatex">\(w(x)\)</span> 我们就可以定义一个关于 <span class="arithmatex">\(w(x)\)</span> 平方可积的函数空间 <span class="arithmatex">\(L_w^2[a,b]\)</span>，也就是我们目标逼近函数所在的空间。</p>
+<blockquote>
+<p><strong>定义</strong>(<span class="arithmatex">\(L_w^2[a,b]\)</span>空间)</p>
+<p><span class="arithmatex">\(L_w^2([a,b])\)</span> 空间为区间 <span class="arithmatex">\([a,b]\)</span> 上所有以 <span class="arithmatex">\(w(x)\)</span> 为权的平方可积函数组成的集合，即</p>
+<div class="arithmatex">\[ L_w^2([a,b]) = \{f(x): \int_a^b f^2(x)w(x)\mathrm{d} x &lt; \infty\} \]</div>
+</blockquote>
+<p>可以验证 <span class="arithmatex">\(L_w^2([a,b])\)</span> 空间为 Hilbert 空间(此处不给出证明，类似证明可见泛函分析基础-Hilbert空间)，且有以下的内积和范数</p>
+<blockquote>
+<p><strong>定义</strong>(<span class="arithmatex">\(L_w^2([a,b])\)</span>的内积与范数)</p>
+<p>设 <span class="arithmatex">\(f,g \in L_w^2([a,b])\)</span> ，则它们的内积定义为</p>
+<div class="arithmatex">\[ \langle f,g \rangle := \int_a^b f(x)g(x)w(x)\mathrm{d} x \]</div>
+<p>根据内积空间范数定义，可得出 <span class="arithmatex">\(f\)</span> 的范数为 <span class="arithmatex">\(||f|| = \int_a^b f^2(x)w(x)\mathrm{d} x\)</span></p>
+</blockquote>
+<h2 id="_2">正交多项式的概念<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>不难验证阶数不大于 <span class="arithmatex">\(N\)</span> 次的多项式空间 <span class="arithmatex">\(\mathbb{P}_N\)</span> 是 <span class="arithmatex">\(L_w^2([a,b])\)</span> 的一个子空间(此处不证)，因此我们可以计算出 <span class="arithmatex">\(\mathbb{P}_N\)</span> 关于 <span class="arithmatex">\(L_w^2([a,b])\)</span> 空间内积的一组正交基，这组基就称为正交多项式。</p>
+<blockquote>
+<p><strong>定义</strong>(正交多项式)</p>
+<p>在 <span class="arithmatex">\(L_w^2([a,b])\)</span> 中，从 <span class="arithmatex">\(1,x,x^2,\cdots\)</span> 出发，按施密特正交化过程得到的多项式 <span class="arithmatex">\(P_0(x),P_1(x),\cdots\)</span> 称为 <span class="arithmatex">\([a,b]\)</span> 上以 <span class="arithmatex">\(w(x)\)</span> 为权的正交多项式</p>
+</blockquote>
+<p>根据施密特正交化的过程不难发现以上述过程得到的正交多项式有如下性质：</p>
+<ul>
+<li><span class="arithmatex">\(P_k(x)\)</span> 是首项系数(<span class="arithmatex">\(x^k\)</span> 的系数)为 1 的 <span class="arithmatex">\(k\)</span> 次多项式</li>
+<li><span class="arithmatex">\(P_0(x),\cdots, P_N(x)\)</span> 组成了阶数不大于 <span class="arithmatex">\(N\)</span> 次的多项式空间 <span class="arithmatex">\(\mathbb{P}_N\)</span> 的一组基</li>
+</ul>
+<p>类似于内积空间中的规范正交基，我们也可以定义规范正交多项式</p>
+<blockquote>
+<p><strong>定义</strong>(规范正交多项式)</p>
+<p>设 <span class="arithmatex">\(P^{\ast}_k(x)\)</span> 是 <span class="arithmatex">\([a,b]\)</span> 上以 <span class="arithmatex">\(w(x)\)</span> 为权的正交多项式，且满足</p>
+<div class="arithmatex">\[ \langle P_i^{\ast} , P_j^{\ast} \rangle = \delta_{i,j} =
+\begin{cases}
+  1, &amp; i = j\\
+  0, &amp; i \neq j
+\end{cases}
+\]</div>
+<p>则称 <span class="arithmatex">\(P_k^{\ast}\)</span> 为 <span class="arithmatex">\(L_w^2([a,b])\)</span> 空间的规范正交多项式</p>
+</blockquote>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "content.code.annotate", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+<script src="../../../javascripts/katex.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
