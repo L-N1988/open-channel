@@ -1,6 +1,38 @@
 {% extends "base.html" %}
-{% block announce %}
-  <!-- For updates subscribe to the
-  <a href="https://lyz-code.github.io/blue-book/newsletter/0_newsletter_index/"><strong>RSS feed</strong></a>
-  <img src="/blue-book/img/orange_logo.png" height="15" width="15"> -->
+{% block extrahead %}
+  {{ super() }}
+  <link rel="manifest" href="{{ 'manifest.webmanifest' | url }}">
+  <meta name="theme-color" content="#f2669b">
+  <link rel="apple-touch-icon" href="{{ 'assets/icons/icon-192.png' | url }}">
+{% endblock %}
+{% block content %}
+  {% if page and page.file.src_path == 'index.md' %}
+    {{ page.content }}
+  {% else %}
+    {{ super() }}
+  {% endif %}
+  {% if page and page.meta and page.meta.hide and 'toc' in page.meta.hide %}
+    <nav class="app-bottom-nav" data-app-nav aria-label="档案导航"></nav>
+    <a class="capture-fab" data-capture-link href="{{ 'record/' | url }}" aria-label="新增记录">＋</a>
+  {% endif %}
+{% endblock %}
+
+{% block site_nav %}
+  {% if page and page.meta and page.meta.hide and 'toc' in page.meta.hide %}
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner">
+        <nav class="md-nav md-nav--primary" aria-label="档案目录" data-md-level="0">
+          <label class="md-nav__title" for="__drawer">我们的时光档案</label>
+          <ul class="md-nav__list">
+            {% for path, title in [('index.md', '首页'), ('memories.md', '回忆时间轴'), ('journals.md', '发现 · 我的小本'), ('trips.md', '旅行计划'), ('calendar.md', '纪念日历'), ('todos.md', '一起想做的事'), ('map.md', '我们的足迹'), ('insights.md', '回看与心情'), ('record.md', '＋ 记录此刻'), ('settings.md', '档案设置')] %}
+              {% set target = 'index.html' if path == 'index.md' else path.replace('.md', '/') %}
+              <li class="md-nav__item"><a href="{{ target | url }}" class="md-nav__link{% if page.file.src_path == path %} md-nav__link--active{% endif %}"{% if page.file.src_path == path %} aria-current="page"{% endif %}>{{ title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div></div>
+    </div>
+  {% else %}
+    {{ super() }}
+  {% endif %}
 {% endblock %}

@@ -3,7 +3,9 @@ hide:
   - toc
 ---
 
-<section class="love-app" data-app-page="home">
+# 我们的回忆
+
+<section class="love-app" data-app-page="memories">
   <p>正在打开我们的时光档案…</p>
   <noscript>请启用 JavaScript 来浏览和编辑记录。</noscript>
 </section>

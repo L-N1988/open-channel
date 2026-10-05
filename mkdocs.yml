@@ -4,8 +4,10 @@ site_url: https://github.com/L-N1988/open-channel
 
 theme:
   name: material
+  language: zh
   custom_dir: theme
   font: false
+  favicon: assets/icons/icon.svg
   icon:
     logo: material/heart
   features:
@@ -18,8 +20,8 @@ theme:
     # Light mode
     - media: '(prefers-color-scheme: light)'
       scheme: default
-      primary: pink
-      accent: pink
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -27,8 +29,8 @@ theme:
     # Dark mode
     - media: '(prefers-color-scheme: dark)'
       scheme: slate
-      primary: pink
-      accent: pink
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -51,15 +53,35 @@ markdown_extensions:
 plugins:
   - search
 
+extra_javascript:
+  - vendor/supabase.js
+  - vendor/leaflet.js
+  - javascripts/love-record-config.js
+  - javascripts/love-icons.js
+  - javascripts/love-core.js
+  - javascripts/love-store.js
+  - javascripts/love-record.js
+
 repo_name: L-N1988/open-channel
 repo_url: https://github.com/L-N1988/open-channel
 
 extra_css:
+  - vendor/leaflet.css
   - stylesheets/extra.css
 
 nav:
-  - 首页: "index.md"
-  - 代办清单: "todos.md"
-  - 照片墙: "photos.md"
-  - 视频墙: "videos.md"
-  - 纪念日历: "calendar.md"
+  - 首页: index.md
+  - 回忆:
+      - 时间轴: memories.md
+      - 时光集: journals.md
+      - 照片墙: photos.md
+      - 视频墙: videos.md
+      - 回看与心情: insights.md
+      - 我们的足迹: map.md
+  - 旅行: trips.md
+  - 日历: calendar.md
+  - 代办: todos.md
+  - 记录: record.md
+  - 设置:
+      - 档案设置: settings.md
+      - 同步配置: supabase-setup.md
